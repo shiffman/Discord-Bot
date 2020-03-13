@@ -1,0 +1,28 @@
+{
+  "name": "itp-ima-discord-bot",
+  "version": "0.0.1",
+  "description": "Based on Coding Garden with CJ example!",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/#TODO.git"
+  },
+  "keywords": [],
+  "author": "Daniel Shiffman adapted from CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/#TODO/issues"
+  },
+  "homepage": "https://github.com/CodingGarden/#TODO/#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
