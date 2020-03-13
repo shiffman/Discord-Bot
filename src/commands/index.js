@@ -10,7 +10,7 @@ const commands = {
 };
 
 module.exports = async (msg) => {
-  console.log(msg);
+  // console.log(msg);
   if (msg.guild.id === guildID && msg.channel.id === channelID) {
     const args = msg.content.split(' ');
     if (args.length == 0 || args[0].charAt(0) !== '!') return;
