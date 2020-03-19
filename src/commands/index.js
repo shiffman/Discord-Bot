@@ -1,16 +1,16 @@
 const ping = require('./ping');
 const eightBall = require('./8ball');
 const role = require('./role');
-const whoami = require("./whoami")
+const whoami = require('./whoami');
 
 const guildID = process.env.GUILD_ID;
 // const channelID = process.env.CHANNEL_ID;
 
 const commands = {
-  "ping": {execute: ping, helptext: ""},
-  "role": {execute: role, helptext: ""},
-  '8ball': {execute: eightBall, helptext: ""},
-  "whoami": {execute: whoami, helptext: ""}
+  'ping': {execute: ping, helptext: ''},
+  'role': {execute: role, helptext: ''},
+  '8ball': {execute: eightBall, helptext: ''},
+  'whoami': {execute: whoami, helptext: ''}
 };
 
 module.exports = async (msg) => {
