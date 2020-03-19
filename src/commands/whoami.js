@@ -30,7 +30,11 @@ module.exports = async (msg, { args }) => {
     .filter(r => r.id !== msg.guild.id)
     .map(async r => await msg.guild.roles.fetch(r))) || 'none';
 
-  const userRoles = await roles();
+  var userRoles = await roles();
+
+  if(userRoles.length == 0){
+    userRoles = ['This user has no roles.']
+  }
 
   const inline = true;
 
