@@ -109,4 +109,4 @@ dist
 
 # Holds the roles for every server
 
-src/commands/roles.json
+./src/commands/roles.json
