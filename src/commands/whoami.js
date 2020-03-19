@@ -1,6 +1,7 @@
 const discord = require('discord.js');
 
-module.exports = async (msg, {args}) => {
+module.exports = async (msg, { args }) => {
+
   let member;
   if (args.length === 0) {
     member = msg.member;
@@ -23,6 +24,7 @@ module.exports = async (msg, {args}) => {
   const created = Intl.DateTimeFormat('en-US').format(member.user.createdAt);
 
   const avatar = (member.user.displayAvatarURL());
+
 
   const roles = async () => Promise.all(member._roles
     .filter(r => r.id !== msg.guild.id)

@@ -2,7 +2,6 @@ const { stripIndents } = require('common-tags');
 
 module.exports = async (msg, { args, functions }) => {
   if (args.length === 0) {
-    console.log('hi');
     let commands = stripIndents`The Available commands are:
         ${'`' + Object.keys(functions).join('`, `') + '`'}
         
