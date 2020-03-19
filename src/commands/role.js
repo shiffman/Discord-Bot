@@ -1,4 +1,4 @@
-module.exports = async (msg, args) => {
+module.exports = async (msg, {args}) => {
   if (args.length < 2) {
     await msg.channel.send(`Sorry ${msg.author}, I require a command and a role name.`);
     return;

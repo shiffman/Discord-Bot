@@ -9,7 +9,7 @@ const eightBall = [
   'It is decidedly so.'
 ];
   
-module.exports = async (msg, args) => {
+module.exports = async (msg, {args}) => {
   if (!args.length) return;
   const i = Math.floor(Math.random() * eightBall.length);
   const reply = eightBall[i];

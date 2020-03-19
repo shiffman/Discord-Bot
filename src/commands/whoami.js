@@ -1,6 +1,6 @@
 const discord = require("discord.js")
 
-module.exports = async (msg, args) => {
+module.exports = async (msg, {args}) => {
     let member
     if (args.length === 0) {
         member = msg.member

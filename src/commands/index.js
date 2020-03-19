@@ -7,10 +7,10 @@ const guildID = process.env.GUILD_ID;
 // const channelID = process.env.CHANNEL_ID;
 
 const commands = {
-  ping,
-  role,
-  '8ball': eightBall,
-  whoami
+  "ping": {execute: ping, helptext: ""},
+  "role": {execute: role, helptext: ""},
+  '8ball': {execute: eightBall, helptext: ""},
+  "whoami": {execute: whoami, helptext: ""}
 };
 
 module.exports = async (msg) => {
@@ -19,7 +19,7 @@ module.exports = async (msg) => {
     if (args.length == 0 || args[0].charAt(0) !== '!') return;
     const command = args.shift().substr(1);
     if (Object.keys(commands).includes(command)) {
-      commands[command](msg, args);
+      commands[command](msg, { args, commands });
     }
   }
 };
