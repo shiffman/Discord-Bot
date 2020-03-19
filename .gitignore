@@ -39,7 +39,7 @@ bower_components
 build/Release
 
 # Dependency directories
-# node_modules/
+node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -106,3 +106,7 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Holds the roles for every server
+
+src/commands/roles.json
