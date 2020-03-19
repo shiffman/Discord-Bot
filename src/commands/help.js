@@ -4,10 +4,10 @@ module.exports = async (msg, { args, functions }) => {
   if (args.length === 0) {
     console.log('hi');
     let commands = stripIndents`The Available commands are:
-        ${'`' + Object.keys(functions).map(key => key.substr(1)).join('`, `') + '`'}
+        ${'`' + Object.keys(functions).join('`, `') + '`'}
         
         tip: type ${'`!help <command>`'} for help that command`;
-            msg.channel.send(commands);
+    msg.channel.send(commands);
   } else {
     const helptext = functions[args[0]];
     if (helptext) {
