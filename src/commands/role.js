@@ -12,6 +12,8 @@ module.exports = async (msg, {args}) => {
     return;
   }
 
+  console.log("test")
+
   const action = args.shift()
   const role = args.join(' ').toLowerCase()
 
