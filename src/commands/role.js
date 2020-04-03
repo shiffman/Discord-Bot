@@ -9,19 +9,11 @@ console.log(roles);
 module.exports = async (msg, {
   args
 }) => {
-  if (args.length < 2) {
-    await msg.channel.send(`Sorry ${msg.author}, I require a command and a role name.`);
-    return;
-  }
-
 
   const action = args.shift();
   const role = args.join(' ').toLowerCase();
 
-  console.log({
-    action,
-    role
-  });
+  console.log(action, role);
 
   if (action === 'add' && role in roles) {
     await msg.member.roles.add(roles[role]);
@@ -29,6 +21,9 @@ module.exports = async (msg, {
   } else if (action === 'remove' && role in roles) {
     await msg.member.roles.remove(roles[role]);
     await msg.channel.send(`${msg.author} The role ${role} has been removed.`);
+  } else if (action === 'list') {
+    let roleList = Object.keys(roles).join('\n');
+    await msg.channel.send(`Available roles:\n\`\`\`${roleList}\`\`\``);
   } else if (action === 'has' && role in roles) {
     // TODO: not yet working
     // const hasRole = msg.author._roles.includes(role);
